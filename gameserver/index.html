@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <script src="http://0xdeadbeef.local:3002/socket.io/socket.io.js"></script>
+  <script>
+      var socket = io('http://0xdeadbeef.local:3002');
+      socket.emit('game:join', {
+          "id": 1
+      });
+
+      socket.on("game:joined", () => {
+          console.log("joined");
+      });
+  </script>
+</head>
+
+<body>
+<video></video>
+</body>
+
+</html>
